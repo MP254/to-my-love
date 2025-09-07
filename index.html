@@ -41,7 +41,7 @@
 
   <body>
     <!-- <audio autoplay="autopaly">
-      <source src="renxi.mp3" type="audio/mp3" />
+      <source src="music/River_Flows_in_You.mp3" type="audio/mp3" />
     </audio> -->
     <!-- 星空html -->
     <!-- <div> -->
@@ -61,9 +61,28 @@
       <canvas id="pinkboard"></canvas>
     </div>
 
+    <audio id="bg-music" loop>
+      <source src="music/River_Flows_in_You.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+
+    <script>
+      const music = document.getElementById("bg-music");
+
+      // phát nhạc khi user click lần đầu
+      document.addEventListener("click", () => {
+        music.play().then(() => {
+          console.log("Nhạc đang phát...");
+        }).catch(err => {
+          console.log("Không phát được nhạc:", err);
+        });
+      }, { once: true });
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
-      const images = ['images/A.JPG', 'images/B.JPG', 'images/C.JPG'];
+      const images = ['images/A1.JPG', 'images/A2.JPG', 'images/A3.JPEG', 'images/A4.JPEG', 'images/A5.JPG', 'images/A6.JPG', 'images/A7.JPG',
+        'images/A8.JPG', 'images/A9.JPEG', 'images/A10.JPEG', 'images/A11.JPEG', 'images/A12.JPEG'];
       let current = 0;
       const imgElement = document.getElementById("slideshow");
 
@@ -85,5 +104,6 @@
     <script src="js/main.js"></script>
     <script src="js/particle.js"></script>
     <script src="js/universe.js"></script>
+
   </body>
 </html>
