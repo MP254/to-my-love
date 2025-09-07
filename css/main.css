@@ -24,7 +24,7 @@ a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white
   z-index: 9999 !important;
   position: absolute;
   left: 50%;
-  top: 42%;
+  top: 50%;
   transform: translateX(-50%) translateY(-50%);
   font-family: "Montserrat";
   text-align: center;
@@ -74,15 +74,17 @@ canvas {
   left: 50%;
   top: 60%;
   transform: translate(-50%, -50%);
-  width: 420px;
-  height: 420px;
+  width: 500px;
+  height: 500px;
 }
 
 #pinkboard {
   position: relative;
   top: 0%;
   left: 0%;
-  height: 429px;
+  width: 550px;   /* thêm width để khớp ảnh */
+  height: 550px;  /* tăng height để tim lớn hơn */
+  transform: scale(1.2); /* tăng 1.2 lần */
 }
 
 .STARDUST1 {
